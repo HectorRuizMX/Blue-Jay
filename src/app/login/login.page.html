@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Log In</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-row style="margin-left: 25px; margin-top: 20px;">
+    <ion-item fill="outline" style="margin-bottom: 5px;">
+      <ion-label position="floating">Email</ion-label>
+      <ion-input placeholder="Ej: Example@email.com"></ion-input>
+    </ion-item>
+    <ion-item fill="outline" style="margin-bottom: 5px;">
+      <ion-label position="floating">Contraseña</ion-label>
+      <ion-input ></ion-input>
+    </ion-item>
+   </ion-row >
+  <ion-row style="margin-top: 20px; margin-left: 50px">
+    <ion-button [routerLink]="[ '/dashboard' ]">Log In</ion-button>
+    <ion-button [routerLink]="[ '/registration' ]">Sign In</ion-button>
+  </ion-row>
+
+</ion-content>
