@@ -30,6 +30,10 @@ const routes: Routes = [
     path: 'config',
     loadChildren: () => import('./config/config.module').then( m => m.ConfigPageModule)
   },
+  {
+    path: 'graphics',
+    loadChildren: () => import('./graphics/graphics.module').then( m => m.GraphicsPageModule)
+  },
 
 ];
 
