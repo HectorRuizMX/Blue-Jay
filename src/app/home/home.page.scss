@@ -1,27 +1,25 @@
-#container {
-  text-align: center;
+.login-grid {
+  height: 100%;
 
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
+  ion-row {
+      height: 100%;
+  }
 }
 
-#container strong {
-  font-size: 20px;
-  line-height: 26px;
+ion-button {
+  --background: rgba(40, 40, 54, 1);
+  height: 3em;
+  width: 8em;
 }
 
-#container p {
-  font-size: 16px;
-  line-height: 22px;
-
-  color: #8c8c8c;
-
-  margin: 0;
+.login-grid {
+  height: 100%;
+  ion-row {
+    height: 100%;
+  }
 }
 
-#container a {
-  text-decoration: none;
+.center{
+  margin-top: 12em;
+  margin-left: 3.5em;
 }

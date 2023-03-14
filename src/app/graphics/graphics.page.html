@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>graphics</ion-title>
+  </ion-toolbar>
+  
+</ion-header>
+
+<ion-content>
+
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>bebedero #1</ion-card-title>
+    </ion-card-header>
+  
+  </ion-card>
+  <ion-tabs>
+    <ion-router-outlet></ion-router-outlet>
+    <ion-tab-bar slot="bottom">
+      <ion-tab-button tab="radio" [routerLink]="[ '/dashboard' ]">
+        <ion-icon name="home-outline"></ion-icon>
+      </ion-tab-button>
+      <ion-tab-button tab="library" [routerLink]="[ '/graphics' ]">
+        <ion-icon name="trending-up-outline"></ion-icon>
+        </ion-tab-button>
+      <ion-tab-button tab="search" [routerLink]="[ '/profile' ]">
+        <ion-icon name="person-outline"></ion-icon>
+      </ion-tab-button>
+    </ion-tab-bar>
+  </ion-tabs>
+
+</ion-content>
