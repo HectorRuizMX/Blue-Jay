@@ -12,7 +12,6 @@ import {AngularFireAuthModule} from '@angular/fire/compat/auth'
 import { AngularFireModule } from '@angular/fire/compat';
 
 import { AngularFireDatabaseModule } from '@angular/fire/compat/database';
-
 @NgModule({
   declarations: [AppComponent],
   imports: [
@@ -24,6 +23,8 @@ import { AngularFireDatabaseModule } from '@angular/fire/compat/database';
     AngularFireAuthModule
   ],
   providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
-  bootstrap: [AppComponent],
+  bootstrap: [
+    AppComponent
+  ],
 })
 export class AppModule {}
