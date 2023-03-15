@@ -1,5 +1,10 @@
 <ion-header>
   <ion-toolbar>
+    
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+  
     <ion-title>Log In</ion-title>
   </ion-toolbar>
 </ion-header>
@@ -16,7 +21,7 @@
       <ion-input ></ion-input>
     </ion-item>
    </ion-row >
-  <ion-row style="margin-top: 20px; margin-left: 50px">
+  <ion-row style="margin-top: 30px; margin-left: 60px">
     <ion-button [routerLink]="[ '/graphics' ]">Log In</ion-button>
     <ion-button [routerLink]="[ '/registration' ]">Sign In</ion-button>
   </ion-row>
