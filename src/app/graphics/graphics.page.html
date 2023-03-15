@@ -1,19 +1,25 @@
-<ion-header>
+<ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>graphics</ion-title>
+    <ion-title>
+      Graficos
+    </ion-title>
   </ion-toolbar>
-  
 </ion-header>
 
-<ion-content>
+<ion-content style="text-align: center;">
 
-
+  <!-- Graficas -->
+ 
   <ion-card>
-    <ion-card-header>
-      <ion-card-title>bebedero #1</ion-card-title>
-    </ion-card-header>
-  
+    <ion-header>
+      Grafica de dona
+    </ion-header>
+    <ion-card-content>
+      <canvas #doughnutCanvas style="position: relative; height: 20vh; width: 40vw;"></canvas>
+    </ion-card-content>
   </ion-card>
+  
+  <!-- Tabs -->
   <ion-tabs>
     <ion-router-outlet></ion-router-outlet>
     <ion-tab-bar slot="bottom">
@@ -28,5 +34,5 @@
       </ion-tab-button>
     </ion-tab-bar>
   </ion-tabs>
-
+  
 </ion-content>
