@@ -6,13 +6,13 @@ export const environment = {
   production: false,
   //Your web app's Firebase configuration
   firebaseConfig: {
-  apiKey: "AIzaSyAwX_-bZr8g18NMHuJbTRqbNzzaJfk2L4k",
-  authDomain: "blue-jay-e4f63.firebaseapp.com",
-  databaseURL: "https://blue-jay-e4f63-default-rtdb.firebaseio.com",
-  projectId: "blue-jay-e4f63",
-  storageBucket: "blue-jay-e4f63.appspot.com",
-  messagingSenderId: "63567735733",
-  appId: "1:63567735733:web:65912b6b545456045e87fc"
+    apiKey: "AIzaSyC6aFFASivfYkEYw6AA2KjzEBcngupnFp8",
+    authDomain: "bebedero-dhdl.firebaseapp.com",
+    databaseURL: "https://bebedero-dhdl-default-rtdb.firebaseio.com",
+    projectId: "bebedero-dhdl",
+    storageBucket: "bebedero-dhdl.appspot.com",
+    messagingSenderId: "279083501512",
+    appId: "1:279083501512:web:27190e49bbbcd20e0262fd"
   }
 };
 

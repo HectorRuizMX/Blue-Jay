@@ -9,3 +9,50 @@
 //     border: none;
     
 // }
+
+.btn{
+--ion-color-primary: #152653;
+background-color: white;
+ font-size: 13px;
+ border: none;
+ height: 25px;
+ width: 60px;
+ padding-left: 0%;
+ padding: 0;
+ margin: 0;
+ border-top: none;
+ border-left: none;
+ border-radius: 40%;
+}
+
+.ion-padding{
+    padding-left: 0%;
+    padding: 0;
+    margin: 0;
+    border-radius: 0%;
+    border: none; 
+    border-top: none;
+    border-left: none; 
+}
+
+.let{
+    font-size: 14px;
+}
+
+.img1{
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 5%;
+}
+
+.text1{
+    text-align: justify;
+    padding: auto;
+    margin-top: 0%;
+    
+}
+
