@@ -10,7 +10,8 @@ const routes: Routes = [
     path: '',
     redirectTo: 'home',
     pathMatch: 'full'
-  },  {
+  },
+  {
     path: 'dashboard',
     loadChildren: () => import('./dashboard/dashboard.module').then( m => m.DashboardPageModule)
   },
@@ -33,10 +34,6 @@ const routes: Routes = [
   {
     path: 'graphics',
     loadChildren: () => import('./graphics/graphics.module').then( m => m.GraphicsPageModule)
-  },
-  {
-    path: 'tabs',
-    loadChildren: () => import('./pages/tabs/tabs.module').then( m => m.TabsPageModule)
   },
 
 ];
