@@ -1,37 +1,20 @@
-<ion-header>
+<ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>graphics</ion-title>
+    <ion-title>
+      Graficos
+    </ion-title>
   </ion-toolbar>
-  
 </ion-header>
 
-<ion-content>
-
-  <!-- Card de comedero -->
-  <ion-card>
-    <ion-card-header>
-      <ion-card-title>Comedero #1</ion-card-title>
-    </ion-card-header>
-  </ion-card>
-
-  <!-- Grafica de comedero -->
-  
-       
-
-  <!-- Tabs -->
-  <ion-tabs>
-    <ion-router-outlet></ion-router-outlet>
-    <ion-tab-bar slot="bottom">
-      <ion-tab-button tab="radio" [routerLink]="[ '/dashboard' ]">
-        <ion-icon name="home-outline"></ion-icon>
-      </ion-tab-button>
-      <ion-tab-button tab="library" [routerLink]="[ '/graphics' ]">
-        <ion-icon name="trending-up-outline"></ion-icon>
-        </ion-tab-button>
-      <ion-tab-button tab="search" [routerLink]="[ '/profile' ]">
-        <ion-icon name="person-outline"></ion-icon>
-      </ion-tab-button>
-    </ion-tab-bar>
-  </ion-tabs>
-
+<ion-content [fullscreen]="true">
+  <div class="ion-padding">
+    <ion-card>
+      <ion-card-header>
+        Doughnut Chart
+      </ion-card-header>
+      <ion-card-content>
+        <canvas #doughnutCanvas style="position: relative; height:20vh; width:40vw"></canvas>
+      </ion-card-content>
+    </ion-card>
+  </div>
 </ion-content>
