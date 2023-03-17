@@ -9,7 +9,7 @@ export class RealtimeDatabaseService {
   constructor(private db: AngularFireDatabase) { }
 
   getData() {
-    return this.db.object('comedero').valueChanges();
+    return this.db.object('Comedero').valueChanges();
   }
 
   leerDatos(ruta: string) {

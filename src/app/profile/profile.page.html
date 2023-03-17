@@ -4,8 +4,154 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content class="content">
+<!-- INTEGRANTES -->
 
+<!-- Danny -->
+<ion-item class="camp">
+  <ion-avatar slot="start">
+    <img alt="Silhouette of a person's head" src="/assets/icon/cardinal.jpg" />
+  </ion-avatar>
+  <ion-label class="let">
+    Martínez Canul
+  </ion-label>
+  <ion-button class= "btn" id="open-modal" expand="block">Inf.</ion-button>
+</ion-item>
+
+<!-- lucas -->
+<ion-item>
+  <ion-avatar slot="start">
+    <img alt="Silhouette of a person's head" src="/assets/icon/blue.jpg" />
+  </ion-avatar>
+  <ion-label class="let">
+    Zamora Sulub
+  </ion-label>
+  <ion-button class= "btn" id="open-modal1" expand="block">Inf.</ion-button>
+</ion-item>
+
+<!-- Hector -->
+<ion-item>
+  <ion-avatar slot="start">
+    <img alt="Silhouette of a person's head" src="/assets/icon/pajaro1.jpg" />
+  </ion-avatar>
+  <ion-label class="let">
+    Ruiz Cauich
+  </ion-label>
+  <ion-button class= "btn" id="open-modal2" expand="block">Inf.</ion-button>
+</ion-item>
+
+<!-- Dani -->
+<ion-item>
+  <ion-avatar slot="start">
+    <img alt="Silhouette of a person's head" src="/assets/icon/pajaro2.jpeg" />
+  </ion-avatar>
+  <ion-label class="let">
+    Gonzales Olivares
+  </ion-label>
+  <ion-button class= "btn" id="open-modal3" expand="block">Inf.</ion-button>
+</ion-item>
+
+<!-- CONTENIDO DANNY -->
+<ion-content class="ion-padding text">
+  <ion-modal
+    trigger="open-modal"
+    [initialBreakpoint]="0.92"
+    [breakpoints]="[0, 0.25, 0.5, 0.75]"
+    handleBehavior="cycle"
+  >
+    <ng-template>
+      <ion-content class="ion-padding text">
+        <ion-label>
+          DANNY JAIR MARTÍNEZ CANUL
+        </ion-label>
+        <div class="ion-margin-top">
+          <h6 class="text1">Soy Danny Jair Martínez Canul, tengo 21 años y estudio en la Universidad Tecnológica de Cancún en el área de Desarrollo de Software Multiplataforma. 
+            Durante la elaboración del proyecto ayude en la elaboración de la app móvil, la base de datos, 
+            el circuito y el prototipo.</h6>
+          <div class="img1">
+            <img class="img1" src="/assets/icon/dann.jpeg" alt="">
+          </div>
+        </div>
+      </ion-content>
+    </ng-template>
+  </ion-modal>
+</ion-content>
+
+<!-- CONTENIDO LUCAS -->
+<ion-content class="ion-padding">
+  <ion-modal
+    trigger="open-modal1"
+    [initialBreakpoint]="0.92"
+    [breakpoints]="[0, 0.25, 0.5, 0.75]"
+    handleBehavior="cycle"
+  >
+    <ng-template>
+      <ion-content class="ion-padding text">
+        <ion-label>
+          LUCAS EDUARDO ZAMORA SULUB
+        </ion-label>
+        <div class="ion-margin-top">
+          <ion-label>Soy Lucas Eduardo Zamora Sulub, tengo 19 años y estudio en la Universidad Tecnológica de Cancún en el área de Desarrollo de Software Multiplataforma. Durante la elaboración del proyecto ayude en la elaboración de la app móvil y el prototipo.</ion-label>
+          <div class="img1">
+            <img class="img1" src="/assets/icon/luc.jpeg" alt="">
+          </div>
+        </div>
+      </ion-content>
+    </ng-template>
+  </ion-modal>
+</ion-content>
+
+<!-- CONTENIDO HECTOR -->
+<ion-content class="ion-padding text">
+  <ion-modal
+    trigger="open-modal2"
+    [initialBreakpoint]="0.92"
+    [breakpoints]="[0, 0.25, 0.5, 0.75]"
+    handleBehavior="cycle"
+  >
+    <ng-template>
+      <ion-content class="ion-padding text">
+        <ion-label>
+          HÉCTOR OMAR RUIZ CAUICH
+        </ion-label>
+        <div class="ion-margin-top text">
+          <ion-label>Soy Héctor Omar Ruiz Cauich, tengo 22 años y estudio en la Universidad Tecnológica de Cancún en el área de Desarrollo de Software Multiplataforma. Durante la elaboración del proyecto ayude en la elaboración de la app móvil, la base de datos, el circuito y el prototipo.</ion-label>
+        </div>
+        <div class="img1">
+          <img class="img1" src="/assets/icon/hec.jpeg" alt="">
+        </div>
+      </ion-content>
+    </ng-template>
+  </ion-modal>
+</ion-content>
+
+<!-- CONTENIDO DANI -->
+<ion-content class="ion-padding text">
+  <ion-modal
+    trigger="open-modal3"
+    [initialBreakpoint]="0.92"
+    [breakpoints]="[0, 0.25, 0.5, 0.75]"
+    handleBehavior="cycle"
+  >
+    <ng-template>
+      <ion-content class="ion-padding text">
+        <ion-label>
+          LUIS DANIEL GONZALES OLIVARES
+        </ion-label>
+        <div class="ion-margin-top text">
+          <ion-label>Soy Luis Daniel Gonzales Olivares, tengo 19 años y estudio en la Universidad Tecnológica de Cancún en el área de Desarrollo de Software Multiplataforma. Durante la elaboración del proyecto ayude en la elaboración de la app móvil, el circuito y el prototipo.</ion-label>
+        </div>
+        <div class="img1">
+          <img class="img1" src="/assets/icon/dan.jpeg" alt="">
+        </div>
+      </ion-content>
+    </ng-template>
+  </ion-modal>
+</ion-content>
+
+
+
+<!-- MENU -->
+<ion-content class="content">
   <ion-tabs>
     <ion-tab-bar slot="bottom">
       <ion-tab-button tab="radio" [routerLink]="[ '/dashboard' ]">
@@ -19,5 +165,4 @@
       </ion-tab-button>
     </ion-tab-bar>
   </ion-tabs>
-
 </ion-content>

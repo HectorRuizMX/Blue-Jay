@@ -1,0 +1,48 @@
+ion-title{
+    padding: auto;
+    margin-top: 0;
+    text-align: center;
+    justify-content: center;
+    font-size: large    ;
+}
+
+
+ion-card-title{
+    font-size:  x large;
+    justify-content: center;
+    text-align: center;
+}
+
+
+ion-slides{
+width: 20rem;
+height: 30rem;
+object-fit: cover;
+
+}
+
+ion-card-content{
+    justify-content:center;
+    text-align: justify;
+}
+
+img{
+    width: 20rem;
+    height: 20rem;
+    object-fit: cover;
+}
+ion-card{
+    margin-top: 10%;
+}
+
+ion-content{
+   margin-top: 0 auto;
+   padding-left: 20%;
+}
+.xd{
+    width: 20rem;
+    height: 20rem;
+    object-fit: cover;
+    display: flex;
+    animation: cambio 2s infinite alternate linear;  
+}
