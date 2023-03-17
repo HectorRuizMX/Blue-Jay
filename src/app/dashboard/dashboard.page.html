@@ -3,11 +3,11 @@
     <ion-buttons slot="start">
       <ion-back-button></ion-back-button>
     </ion-buttons>
+    <ion-title color="light">Peck Cam</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content color="mycolor">
-
   <ion-card>
     <ion-card-header>
       <ion-card-title> !Hola bienvenido de nuevo!  </ion-card-title>
@@ -48,16 +48,16 @@
 <!-- FINTXT -->
   <ion-tabs>
     <ion-tab-bar slot="bottom">
-      <ion-tab-button color="mycolor"  tab="radio" [routerLink]="[ '/dashboard' ]">
+      <ion-tab-button color="mycolor"  tab="dashboard" [routerLink]="[ '/dashboard' ]">
         <ion-icon name="home-outline"></ion-icon>
       </ion-tab-button>
-      <ion-tab-button  color="mycolor" tab="radio" [routerLink]="[ '/herramientas' ]">
+      <ion-tab-button  color="mycolor" tab="herramientas" [routerLink]="[ '/herramientas' ]">
         <ion-icon name="hammer-outline"></ion-icon>
       </ion-tab-button>
-      <ion-tab-button  color="mycolor" tab="library" [routerLink]="[ '/graphics' ]">
+      <ion-tab-button  color="mycolor" tab="graficas" [routerLink]="[ '/graphics' ]">
         <ion-icon name="trending-up-outline"></ion-icon>
         </ion-tab-button>
-      <ion-tab-button  color="mycolor" tab="search" [routerLink]="[ '/profile' ]">
+      <ion-tab-button  color="mycolor" tab="perfil" [routerLink]="[ '/profile' ]">
         <ion-icon name="person-outline"></ion-icon>
       </ion-tab-button>
     </ion-tab-bar>

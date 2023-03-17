@@ -1,6 +1,9 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title class="title">profile</ion-title>
+  <ion-toolbar color="mycolor">
+    <ion-buttons slot="start">
+      <ion-back-button color="light"></ion-back-button>
+    </ion-buttons>
+    <ion-title class="title">Nosotros</ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -151,18 +154,19 @@
 
 
 <!-- MENU -->
-<ion-content class="content">
-  <ion-tabs>
-    <ion-tab-bar slot="bottom">
-      <ion-tab-button tab="radio" [routerLink]="[ '/dashboard' ]">
-        <ion-icon name="home-outline"></ion-icon>
+<ion-tabs>
+  <ion-tab-bar slot="bottom">
+    <ion-tab-button color="mycolor"  tab="dashboard" [routerLink]="[ '/dashboard' ]">
+      <ion-icon name="home-outline"></ion-icon>
+    </ion-tab-button>
+    <ion-tab-button  color="mycolor" tab="herramientas" [routerLink]="[ '/herramientas' ]">
+      <ion-icon name="hammer-outline"></ion-icon>
+    </ion-tab-button>
+    <ion-tab-button  color="mycolor" tab="graficas" [routerLink]="[ '/graphics' ]">
+      <ion-icon name="trending-up-outline"></ion-icon>
       </ion-tab-button>
-      <ion-tab-button tab="library" [routerLink]="[ '/graphics' ]">
-        <ion-icon name="trending-up-outline"></ion-icon>
-        </ion-tab-button>
-      <ion-tab-button tab="search" [routerLink]="[ '/profile' ]">
-        <ion-icon name="person-outline"></ion-icon>
-      </ion-tab-button>
-    </ion-tab-bar>
-  </ion-tabs>
-</ion-content>
+    <ion-tab-button  color="mycolor" tab="perfil" [routerLink]="[ '/profile' ]">
+      <ion-icon name="person-outline"></ion-icon>
+    </ion-tab-button>
+  </ion-tab-bar>
+</ion-tabs>
