@@ -28,13 +28,10 @@ const routes: Routes = [
     loadChildren: () => import('./profile/profile.module').then( m => m.ProfilePageModule)
   },
   {
-    path: 'config',
-    loadChildren: () => import('./config/config.module').then( m => m.ConfigPageModule)
-  },
-  {
     path: 'graphics',
     loadChildren: () => import('./graphics/graphics.module').then( m => m.GraphicsPageModule)
-  },  {
+  },
+  {
     path: 'herramientas',
     loadChildren: () => import('./herramientas/herramientas.module').then( m => m.HerramientasPageModule)
   },
