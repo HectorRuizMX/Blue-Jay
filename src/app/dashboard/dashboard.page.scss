@@ -1,10 +1,26 @@
+// estilo a los botones con un borde
+.boton{
+    border-radius: 2rem;
+    border: 2px solid#b4b4b4;
+}
+
 
 ion-card-title{
     font-size:  x large;
     justify-content: center;
     text-align: center;
 }
+// centrar y ajustar texto
+.centro{
+    font-size:  x large;
+    justify-content: center;
+    text-align: justify;
+}
 
+// aqui es solo para sentrar el texto SM52
+.centro1{
+    text-align: center;
+}
 
 ion-slides{
 width: 2
@@ -24,10 +40,24 @@ img{
     width: 20rem;
     height: 20rem;
     object-fit: cover;
+    border: 2px 2px 2px 2px;
+    border-radius: 1rem;
+}
+
+// estilos a las card
+.img1{
+    margin-top: 20%;
+    border-radius: 2rem;
 }
 ion-card{
-    margin-top: 10%;
-    background-color:#fbfffc;
+    border-radius: 2rem;
+    border: 2px solid #b4b4b4;
+}
+
+.card2{
+    margin-top: 1.5rem;
+    border-radius: 1rem;
+    border: 2px solid#b4b4b4;
 }
 
 .xd{
@@ -59,7 +89,29 @@ ion-toolbar{
 ion-card-header{
     background-color: #fafdfb;
 }
+
 ion-tab-button{
    color: #32623d;
+}
+
+ion-back-button{
+    color: #ffffff;
+}
+
+.inicio{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+// hover de las cards
+ion-card:hover {
+    transform: translateY(-5px);
+    transition: transform 0.2s ease-in-out;
+    box-shadow: 0 7px 12px rgba(0, 0, 0, 0.4);
+}
+
+ion-card {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
 }
 

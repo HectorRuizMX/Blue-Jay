@@ -1,69 +1,205 @@
-<ion-header>
-  <ion-toolbar color="mycolor">
-    <ion-title></ion-title>
+<ion-header >
+  <ion-toolbar color="mycolor" >
+    <ion-title>Información</ion-title>
+    <ion-buttons slot="end" class="boton">
+      <ion-button color="whit" [routerLink]="['/menu']">Regresar</ion-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-  <ion-card>
-    <ion-card-content>
-      Las herramientas que se usaron para el desarrollo del Comedero fueron los siguientes:
-    </ion-card-content>
-  </ion-card>
-  
-
+  <!-- titulo o encabezado -->
+  <div class="titulo">
+    <h1> Herramientas utilizadas para el comedero</h1>
+  </div>
+  <!-- inicio de card 1 -->
   <ion-slides pager="true">
     <ion-slide>
-      <ion-card>
-        <img src="/assets/icon/ESP32CAM.jpg">
+      <ion-card class="img1">
+        <div class="img1">
+          <img src="/assets/icon/ESP32CAM.jpg">
+        </div>
           <h2>ESP32CAM</h2>
-          <ion-card-content class="ion-text-left">
-            Esta placa contiene unacamara que nos permite tomar las fotos y guardarlas en una SD
+          <ion-card-content class="centro">
+            Esta placa contiene una camara que nos permite tomar las fotos y guardarlas en una SD
           </ion-card-content>
       </ion-card>
     </ion-slide>
-  
-  
-    <!-- segundo cart -->
-
+    <!-- Cart 1 pero info-->
       <ion-slide>
-        <ion-card>
-          <img src="/assets/icon/ULTRASONICO.jpg">
+        <ion-card class="card-lg">
+          <div class="img1">
+            <ion-card-content class="text"> 
+              La <strong>ESP32 CAM</strong> es una pequeña placa electrónica que combina 
+              un microcontrolador ESP32 con una cámara OV2640 de 2 megapíxeles, 
+              lo que permite la captura de imágenes y videos. Es muy útil para proyectos 
+              de IoT, robótica y automatización, ya que permite la monitorización y control 
+              de diferentes entornos a través de la captura de imágenes y videos en tiempo real. 
+              Además, es una placa muy versátil que puede ser programada en diferentes lenguajes de 
+              programación y se puede conectar a diferentes dispositivos y sensores
+            </ion-card-content>
+          </div>
+        </ion-card>
+      </ion-slide>
+    <!-- FIN de Cart 1--> 
+  </ion-slides>
+  <!-- inicio de card 2  -->
+  <ion-slides pager="true">
+  <ion-slide>
+    <ion-card class="img1">
+      <div class="img1">
+        <img src="/assets/icon/PIR.jpg">
+      </div>
+        <h2>SENSOR PIR</h2>
+        <ion-card-content class="centro">
+          Este sensor nos permite detectar el mvimiento en el comedero para que se active la ESP32 CAM 
+        </ion-card-content>
+    </ion-card>
+  </ion-slide>
+  <!-- Cart 2 pero info -->
+    <ion-slide>
+      <ion-card class="card-lg">
+        <div class="img1">
+          <ion-card-content class="text"> 
+            Un <strong>sensor PIR</strong> detecta la radiación infrarroja 
+            emitida por los cuerpos en movimiento. Es muy útil 
+            en proyectos de seguridad y domótica, ya que permite 
+            detectar la presencia de personas o animales en un área 
+            determinada. Los sensores PIR son ampliamente utilizados 
+            en sistemas de seguridad para detectar intrusos, activar 
+            alarmas o encender luces cuando se detecta movimiento.
+          </ion-card-content>
+        </div>
+      </ion-card>
+    </ion-slide>
+  </ion-slides>
+  <!-- FIN de Cart 2 -->
+  <!-- INICIO de la Cart 3 -->
+    <ion-slides>
+      <ion-slide>
+        <ion-card class="img1">
+          <div class="img1">
+            <img src="/assets/icon/ULTRASONICO.jpg">
+          </div>
             <h2>ULTRASONICO</h2>
-            <ion-card-content class="ion-text-left">
+            <ion-card-content class="centro">
               Este sensor nos permite medir la cantidad de comida que tenemos almacenada en el comedero.
             </ion-card-content>
         </ion-card>
       </ion-slide>
-
-  
+      <!-- Cart 3 pero info -->
         <ion-slide>
-          <ion-card>
-            <img src="/assets/icon/PIR.jpg">
-              <h2>PIR</h2>
-              <ion-card-content class="ion-text-left">
-                Este sensor nos permite detectar el mvimiento en el comedero para que se active la ESP32 CAM 
+          <ion-card class="card-lg">
+            <div class="img1">
+              <ion-card-content class="text"> 
+                Un <strong>sensor ultrasónico</strong> es un dispositivo electrónico 
+                que utiliza ondas sonoras de alta frecuencia para medir 
+                la distancia entre el sensor y un objeto. Es muy útil en 
+                proyectos de robótica, domótica e IoT, ya que permite detectar 
+                la presencia y distancia de objetos, personas o animales sin 
+                necesidad de contacto físico. Además, se puede utilizar para medir 
+                la velocidad de un objeto en movimiento o para generar mapas en 3D 
+                de entornos, entre otras aplicaciones. En resumen, el sensor ultrasónico 
+                es una herramienta importante en la automatización y el control de diferentes 
+                entornos y objetos.
               </ion-card-content>
+            </div>
           </ion-card>
         </ion-slide>
-  
-  </ion-slides>
-  <!-- MENU -->
-
-  <ion-tabs>
-    <ion-tab-bar slot="bottom">
-      <ion-tab-button tab="radio" [routerLink]="[ '/dashboard' ]">
-        <ion-icon name="home-outline"></ion-icon>
-      </ion-tab-button>
-      <ion-tab-button tab="radio" [routerLink]="[ '/herramientas' ]">
-        <ion-icon name="hammer-outline"></ion-icon>
-      </ion-tab-button>
-      <ion-tab-button tab="library" [routerLink]="[ '/graphics' ]">
-        <ion-icon name="trending-up-outline"></ion-icon>
-        </ion-tab-button>
-      <ion-tab-button tab="search" [routerLink]="[ '/profile' ]">
-        <ion-icon name="person-outline"></ion-icon>
-      </ion-tab-button>
-    </ion-tab-bar>
-  </ion-tabs>
+      </ion-slides>
+      <!-- FIN de cart 3 -->
+      <!-- INICIO de la Cart 4 -->
+    <ion-slides>
+      <ion-slide>
+        <ion-card class="img2">
+          <div class="img2">
+            <img src="/assets/icon/SERVO.jpeg">
+          </div>
+            <h2>SERVOMOTOR</h2>
+            <ion-card-content class="centro">
+              El servomotor nos sirve para poder abrir el dispensador de comida para subministrar y controlar dicho alimento.
+            </ion-card-content>
+        </ion-card>
+      </ion-slide>
+      <!-- Cart 4 pero info -->
+        <ion-slide>
+          <ion-card class="card-lg">
+            <div class="img1">
+              <ion-card-content class="text"> 
+                Un <strong>servomotor</strong> es un dispositivo que se 
+                utiliza para controlar la posición de un 
+                objeto en una aplicación mecánica. Es muy útil 
+                en proyectos de robótica, domótica e IoT, ya que 
+                permite controlar la posición de diferentes elementos 
+                mecánicos, como brazos robóticos, puertas, ventanas, 
+                entre otros. En resumen, el servomotor es una herramienta 
+                importante para el control preciso de la posición de objetos 
+                en diferentes aplicaciones mecánicas.
+              </ion-card-content>
+            </div>
+          </ion-card>
+        </ion-slide>
+      </ion-slides>
+      <!-- FIN de cart 4 -->
 </ion-content>
+
+
+
+
+
+
+
+
+
+
+<!-- <ion-slide>
+  <ion-card>
+    <img src="/assets/icon/ULTRASONICO.jpg">
+      <h2>ULTRASONICO</h2>
+      <ion-card-content class="ion-text-left">
+        Este sensor nos permite medir la cantidad de comida que tenemos almacenada en el comedero.
+      </ion-card-content>
+  </ion-card>
+</ion-slide>
+
+
+  <ion-slide>
+    <ion-card>
+      <img src="/assets/icon/PIR.jpg">
+        <h2>PIR</h2>
+        <ion-card-content class="ion-text-left">
+          Este sensor nos permite detectar el mvimiento en el comedero para que se active la ESP32 CAM 
+        </ion-card-content>
+    </ion-card>
+  </ion-slide> -->
+
+        <!-- inicio de card 2 
+<ion-slides pager="true">
+  <ion-slide>
+    <ion-card class="img1">
+      <div class="img1">
+        <img src="/assets/icon/PIR.jpg">
+      </div>
+        <h2>SENSOR PIR</h2>
+        <ion-card-content class="ion-text-left">
+          Este sensor nos permite medir la cantidad de comida que tenemos almacenada en el comedero.
+        </ion-card-content>
+    </ion-card>
+  </ion-slide>
+  < Cart 2 pero info-
+    <ion-slide>
+      <ion-card class="card-lg">
+        <div class="img1">
+          <ion-card-content class="text"> 
+            Un <strong>sensor PIR</strong> detecta la radiación infrarroja 
+            emitida por los cuerpos en movimiento. Es muy útil 
+            en proyectos de seguridad y domótica, ya que permite 
+            detectar la presencia de personas o animales en un área 
+            determinada. Los sensores PIR son ampliamente utilizados 
+            en sistemas de seguridad para detectar intrusos, activar 
+            alarmas o encender luces cuando se detecta movimiento.
+          </ion-card-content>
+        </div>
+      </ion-card>
+    </ion-slide>
+  FIN de Cart 2--> 

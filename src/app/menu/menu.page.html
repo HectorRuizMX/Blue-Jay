@@ -1,0 +1,130 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title [routerLink]="['/home']">Categoría</ion-title>
+  </ion-toolbar>
+</ion-header>
+<style>
+  ion-title {
+    text-align: center;
+  }
+</style>
+
+<!-- Contenido de las cards por cada divisor -->
+<ion-content>
+  <div class="titulo">
+    <h1>Selecione la categoría que desea entrar</h1>
+  </div>
+  <div class="parent">
+    <div class="div1" [routerLink]="['/dashboard']">
+      <!-- icono -->
+      <div class="icon">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-report" width="52" height="52" viewBox="0 0 24 24" stroke-width="2" stroke="#236418" fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+          <path d="M8 5h-2a2 2 0 0 0 -2 2v12a2 2 0 0 0 2 2h5.697" />
+          <path d="M18 14v4h4" />
+          <path d="M18 11v-4a2 2 0 0 0 -2 -2h-2" />
+          <rect x="8" y="3" width="6" height="4" rx="2" />
+          <circle cx="18" cy="18" r="4" />
+          <path d="M8 11h4" />
+          <path d="M8 15h3" />
+        </svg>
+      </div>
+      <!-- LETRA -->
+      <div class="icon">
+        <p>INICIO</p>
+      </div>
+    </div>
+    <div class="div2" [routerLink]="['/herramientas']"> 
+      <div class="icon">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-info-circle" width="52" height="52" viewBox="0 0 24 24" stroke-width="2" stroke="#236418" fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+          <circle cx="12" cy="12" r="9" />
+          <line x1="12" y1="8" x2="12.01" y2="8" />
+          <polyline points="11 12 12 12 12 16 13 16" />
+        </svg>
+      </div>
+      <div class="icon">
+        <p>INFORMACIÓN</p>
+      </div>
+    </div>
+    <div class="div3" [routerLink]="['/graphics']">
+      <div class="icon">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chart-bar" width="52" height="52" viewBox="0 0 24 24" stroke-width="2" stroke="#236418" fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+          <rect x="3" y="12" width="6" height="8" rx="1" />
+          <rect x="9" y="8" width="6" height="12" rx="1" />
+          <rect x="15" y="4" width="6" height="16" rx="1" />
+          <line x1="4" y1="20" x2="18" y2="20" />
+        </svg>
+      </div>
+      <div class="icon">
+        <p>GRÁFICAS</p>
+      </div>
+    </div>
+    <div class="div4" [routerLink]="['/profile']"> 
+      <div class="icon">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-users" width="52" height="52" viewBox="0 0 24 24" stroke-width="2" stroke="#236418" fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+          <circle cx="9" cy="7" r="4" />
+          <path d="M3 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+          <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+          <path d="M21 21v-2a4 4 0 0 0 -3 -3.85" />
+        </svg>
+      </div>
+      <div class="icon">
+        <p>NOSOTROS</p>
+      </div>
+    </div>
+  </div>
+  <div class="parent1">
+    <div class="div5" [routerLink]="['/control']">
+      <div class="icon">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-adjustments-horizontal" width="52" height="52" viewBox="0 0 24 24" stroke-width="2" stroke="#236418" fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+          <circle cx="14" cy="6" r="2" />
+          <line x1="4" y1="6" x2="12" y2="6" />
+          <line x1="16" y1="6" x2="20" y2="6" />
+          <circle cx="8" cy="12" r="2" />
+          <line x1="4" y1="12" x2="6" y2="12" />
+          <line x1="10" y1="12" x2="20" y2="12" />
+          <circle cx="17" cy="18" r="2" />
+          <line x1="4" y1="18" x2="15" y2="18" />
+          <line x1="19" y1="18" x2="20" y2="18" />
+        </svg>
+      </div>
+      <div class="icon, centro">
+        <p>PANEL DE CONTROL</p>
+      </div>
+  </div>
+  </div>
+</ion-content>
+<!-- FIN del Contenido de las cards por cada divisor -->
+
+
+
+
+
+    <!-- <div class="Dato Boton">
+      <ion-icon name="bulb-outline"></ion-icon>
+      <p>Foco</p>
+      <ion-label>Apagado</ion-label>
+    </div>
+
+    <div class="Dato">
+      <ion-icon name="thermometer"></ion-icon>
+      <p>Temperatura</p>
+      <ion-label>0°C</ion-label>
+    </div>
+
+    <div class="Dato Minimo">
+      <ion-icon name="thermometer"></ion-icon>
+      <p>Mínimo</p>
+      <ion-label>23°C</ion-label>
+    </div>
+
+    <div class="Dato Maximo">
+      <ion-icon name="thermometer"></ion-icon>
+      <p>Máximo</p>
+      <ion-label>28°C</ion-label>
+    </div> -->
+

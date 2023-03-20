@@ -1,71 +1,85 @@
 <ion-header >
   <ion-toolbar color="mycolor" >
-    <ion-buttons slot="start">
-      <ion-back-button></ion-back-button>
+    <ion-title>Panel</ion-title>
+    <ion-buttons slot="end" class="boton">
+      <ion-button color="whit" [routerLink]="['/menu']">Regresar</ion-button>
     </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
-<ion-content color="mycolor">
 
-  <ion-card>
-    <ion-card-header>
-      <ion-card-title> !Hola bienvenido de nuevo!  </ion-card-title>
-    </ion-card-header>
-  </ion-card>
-  
-  <ion-slides  class="xd" pager="true" >
+<ion-content color="mycolor">
+  <div class="inicio">
+    <h2>! Bienvenido de nuevo !</h2>
+  </div>
+
+  <!-- Inicio -->
+    <ion-card>
+      <ion-slides  class="xd" pager="true" >
+        <ion-slide>
+          <ion-card class="img1">
+            <img src="/assets/icon/comedero.jpeg">
+          </ion-card>
+        </ion-slide>
+        <!-- segundo cart  -->
     <ion-slide>
-      <ion-card>
-        <img src="/assets/icon/comedero.jpeg">
-      </ion-card>
-    </ion-slide>
-  
-    <!-- segundo cart -->
-    <ion-slide>
-      <ion-card>
+      <ion-card class="img1">
         <img  src="/assets/icon/comedero1.jpeg">
       </ion-card>
     </ion-slide>
-    <!-- tercer card -->
+    <!-- tercer card  -->
     <ion-slide>
-      <ion-card>
+      <ion-card class="img1">
         <img src="/assets/icon/comedero2.jpeg">
       </ion-card>
     </ion-slide>
   
   </ion-slides>
-   <!-- TEXT -->
-  <ion-card>
-    <ion-card-content>
-      PECKCAM es una propuesta acerca de un comedero inteligente, donde recaudamos informacion de aves mediante nuestro conocimiento de IOT, FIREBASE y IONIC
-      <br>
-      <br>
-      <br>
-    </ion-card-content>
+      <ion-card-header>
+        <ion-card-title>Comedero de Aves</ion-card-title>
+        <ion-card-subtitle class="centro1">Grupo SM52</ion-card-subtitle>
+      </ion-card-header>
+    
+      <ion-card-content class="centro">
+        PECKCAM es una propuesta acerca de un comedero inteligente, 
+        donde recaudamos informacion de aves mediante nuestro conocimiento 
+        de IOT, FIREBASE y IONIC.
+      </ion-card-content>
+    </ion-card>
+<!-- Mas Info card 2 -->
+<ion-card class="card2">
+  <ion-slides  class="xd" pager="true" >
+    <ion-slide>
+      <ion-card class="img1">
+        <img src="/assets/icon/p2.jpg">
+      </ion-card>
+    </ion-slide>
+    <!-- segundo cart  -->
+<ion-slide>
+  <ion-card class="img1">
+    <img  src="/assets/icon/p1.jpg">
   </ion-card>
-  
-<!-- FINTXT -->
-  <ion-tabs>
-    <ion-tab-bar slot="bottom">
-      <ion-tab-button color="mycolor"  tab="radio" [routerLink]="[ '/dashboard' ]">
-        <ion-icon name="home-outline"></ion-icon>
-      </ion-tab-button>
-      <ion-tab-button  color="mycolor" tab="radio" [routerLink]="[ '/herramientas' ]">
-        <ion-icon name="hammer-outline"></ion-icon>
-      </ion-tab-button>
-      <ion-tab-button  color="mycolor" tab="library" [routerLink]="[ '/graphics' ]">
-        <ion-icon name="trending-up-outline"></ion-icon>
-        </ion-tab-button>
-      <ion-tab-button  color="mycolor" tab="search" [routerLink]="[ '/profile' ]">
-        <ion-icon name="person-outline"></ion-icon>
-      </ion-tab-button>
-    </ion-tab-bar>
-  </ion-tabs>
-</ion-content>
+</ion-slide>
+<!-- tercer card  -->
+<ion-slide>
+  <ion-card class="img1">
+    <img src="/assets/icon/p3.png">
+  </ion-card>
+</ion-slide>
 
-<!-- MENU -->
+</ion-slides>
+  <ion-card-header>
+    <ion-card-title>Problematica</ion-card-title>
+    <ion-card-subtitle class="centro1">Grupo SM52</ion-card-subtitle>
+  </ion-card-header>
 
- 
+  <ion-card-content class="centro">
+    En la Universidad Tecnológica de Cancún, las aves consumen alimentos destinados para humanos y basura, 
+    lo que puede ser perjudicial para su salud debido a la exposición a químicos y otros contaminantes. Por 
+    lo tanto, el comedero se encargará de proveer comida destinada para ellos y de esa manera ayudarlos.
+  </ion-card-content>
+</ion-card>
+
+
 
 
