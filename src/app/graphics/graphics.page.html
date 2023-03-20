@@ -1,39 +1,64 @@
 <ion-header [translucent]="true">
   <ion-toolbar color="mycolor">
-    <ion-buttons slot="start">
-      <ion-back-button></ion-back-button>
-    </ion-buttons>
     <ion-title>
-      Gráficos
+      Gráficas
     </ion-title>
+    <ion-buttons slot="end" class="boton">
+      <ion-button color="whit" [routerLink]="['/menu']">Regresar</ion-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
 <ion-content style="text-align: center;">
+<!-- graficas -->
+<div class="boton">
 
-  <!-- Graficas -->
-  <ion-card>
+  <ion-col>
+    <div class="ion-text-center">
+      {{ "Almacen" }}
+      <ion-item *ngIf="data" lines="none">
+        Le queda al {{ "Almacen" }} el {{ data.Almacen}}% de comida
+        <div
+          class="pie"
+          [ngStyle]="{'--p': data1}"
+          style="--p: 50; --b: 10px; --c: green "
+         >
+          {{ data.Almacen}}%
+        </div>
+      </ion-item>
+    </div>
+  </ion-col> 
+</div>
+<!-- grafica 2 -->
+<div class="boton">
+  <ion-col>
+    <div class="ion-text-center">
+      {{ "Recipiente" }}
+      <ion-item *ngIf="data" lines="none">
+        Le queda al {{ "Recipiente" }} el {{ data.Recipiente}}% de comida
+        <div
+          class="pie"
+          [ngStyle]="{'--p': data2}"
+          style="--p: 50; --b: 10px; --c: purple"
+        >
+          {{ data.Recipiente}}%
+        </div>       
+      </ion-item>
+    </div>
+  </ion-col>
+</div>
+  <!-- Numero de fotos -->
+  <!-- <div>
+    <div>
+      {{ data.Fotos }}
+    </div>
+  </div> -->
+<!-- Numero de fotos -->
+</ion-content>
+
+
+  <!-- <ion-card>
     <ion-card-content>
       <canvas #doughnutCanvas style="position: relative; height: 20vh; width: 40vw;"></canvas>
     </ion-card-content>
-  </ion-card>
-  
-  <!-- Tabs -->
-  <ion-tabs>
-    <ion-tab-bar slot="bottom">
-      <ion-tab-button color="mycolor"  tab="dashboard" [routerLink]="[ '/dashboard' ]">
-        <ion-icon name="home-outline"></ion-icon>
-      </ion-tab-button>
-      <ion-tab-button  color="mycolor" tab="herramientas" [routerLink]="[ '/herramientas' ]">
-        <ion-icon name="hammer-outline"></ion-icon>
-      </ion-tab-button>
-      <ion-tab-button  color="mycolor" tab="graficas" [routerLink]="[ '/graphics' ]">
-        <ion-icon name="trending-up-outline"></ion-icon>
-        </ion-tab-button>
-      <ion-tab-button  color="mycolor" tab="perfil" [routerLink]="[ '/profile' ]">
-        <ion-icon name="person-outline"></ion-icon>
-      </ion-tab-button>
-    </ion-tab-bar>
-  </ion-tabs>
-  
-</ion-content>
+  </ion-card> -->

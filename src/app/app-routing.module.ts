@@ -34,7 +34,15 @@ const routes: Routes = [
   {
     path: 'herramientas',
     loadChildren: () => import('./herramientas/herramientas.module').then( m => m.HerramientasPageModule)
+  },  {
+    path: 'menu',
+    loadChildren: () => import('./menu/menu.module').then( m => m.MenuPageModule)
   },
+  {
+    path: 'control',
+    loadChildren: () => import('./control/control.module').then( m => m.ControlPageModule)
+  },
+
 
 
 ];

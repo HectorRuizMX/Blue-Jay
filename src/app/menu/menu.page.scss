@@ -1,0 +1,186 @@
+// titulo
+.titulo{
+    text-align: center;
+}
+
+// Para cambiar el color del Toolbar
+ion-toolbar{
+    --background: rgb(35, 100, 24);
+    display: flex;
+    flex-direction: row;
+}
+// cambiar el color de la letra del menu
+ion-title{
+    color: white;
+    font-size: 32px;
+}
+
+ion-footer ion-toolbar{
+    --background: rgb(0, 0, 0);
+}
+
+// centrar letras
+.centro{
+    font-size:  x large;
+    justify-content: center;
+    text-align: center;
+}
+
+// Cambiar icono
+.icon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2px;
+}
+
+// Contenido de las carts con div
+.Contenido_Info{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding: 2rem 1rem;
+    background-color: rgba(255, 253, 253, 0.897); 
+}
+
+// grid del menu para personalizarlo
+.parent1{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+    grid-column-gap: 26px; /* Aumentar el espacio entre columnas */
+    grid-row-gap: 20px; /* Aumentar el espacio entre filas */
+    justify-content: center;
+}
+
+.div5{
+    grid-area: 2 / 2; 
+    border-radius: 1rem;
+    border: 2px solid rgb(35, 100, 24);
+    height: 8rem;
+    width: 9rem;
+    top: 50%;
+}
+.parent {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+    grid-column-gap: 26px; /* Aumentar el espacio entre columnas */
+    grid-row-gap: 20px; /* Aumentar el espacio entre filas */
+    justify-content: center;
+}
+    
+    .div1 { grid-area: 2 / 2; 
+    border-radius: 1rem;
+    border: 2px solid rgb(35, 100, 24);
+    height: 8rem;
+    width: 9rem;
+    top: 50%;
+}
+
+    .div2 { grid-area: 2 / 3 ; 
+    border-radius: 1rem;
+    border: 2px solid rgb(35, 100, 24);
+    height: 8rem;
+    width: 9rem;
+    top: 50%;}
+
+    .div3 { grid-area: 3 / 2 ; 
+    border-radius: 1rem;
+    border: 2px solid rgb(35, 100, 24);
+    height: 8rem;
+    width: 9rem;
+    top: 50%;}
+
+    .div4 { grid-area: 3 / 3 ; 
+    border-radius: 1rem;
+    border: 2px solid rgb(35, 100, 24);
+    height: 8rem;
+    width: 9rem;
+    top: 50%;
+}
+
+/******color a las carts de los divisores**********/
+// .div1{
+//     background-color: rgba(66,193,110,1);
+// }
+
+
+
+// hover de los div
+// .div1:hover {
+//     transform: scale(1.2);
+//     transition: all 4.3s;
+// }
+
+.Dato{
+    height: 6rem;
+    width: 9rem;
+    border-radius: 1rem;
+    background-color: rgba(216, 213, 213, 0.856);
+}
+
+
+
+
+
+
+
+
+
+
+// extras
+.Dato ion-icon{
+    position: absolute;
+    font-size: 2.3rem;
+    margin-top: 0.8rem;
+    color: rgb(10, 190, 85);
+}
+
+.Dato p{
+    font-size: 12px;
+    color: rgb(0,0,0);
+    transform: translate(2rem ,-0.2rem);
+}
+
+.Dato ion-label{
+    position: absolute;
+    font-size: 12px;
+    color: rgb(0,0,0);
+    transform: translate(3rem ,-0.4rem);
+}
+
+.Boton ion-icon{
+    color: rgb(136, 4, 136);
+}
+.Minimo ion-icon{
+    color: rgb(10, 67, 190);
+}
+.Maximo ion-icon{
+    color: rgb(190, 10, 10);
+}
+
+.Contenedor_Footer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+.Redirecciones{
+    width: 20%;
+    height: 3rem;
+    border-radius: 5rem;
+    cursor: pointer;
+}
+
+.Redirecciones:hover{
+    background-color: rgba(94, 66, 15, 0.651);
+    transition: all 0.4s;
+}
+
+.Redirecciones ion-icon{
+    font-size: 2rem;
+    transform: translate(30%, 0.4rem);
+}
+

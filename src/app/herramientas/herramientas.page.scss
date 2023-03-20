@@ -1,3 +1,9 @@
+// modificar el texto
+.text{
+    text-align: justify;
+    font-size: 111%;
+}
+
 ion-toolbar{
     background-color: #32623d;
 }
@@ -26,4 +32,45 @@ ion-back-button{
 
 ion-title{
     color: #ffffff;
+}
+
+// estilo al boton
+.boton{
+    border-radius: 2rem;
+    border: 2px solid#b4b4b4;
+}
+
+// titulo
+.titulo{
+    text-align: center;
+    margin: 10px;
+}
+
+// estilos a las card
+.img1{
+    border-radius: 2rem;
+    margin: 6px;
+}
+// para la imagen del servo
+.img2{
+    border-radius: 2rem;
+    margin: 10px;
+    margin-block: -4px;
+}
+
+ion-card{
+    border-radius: 2rem;
+    border: 2px solid #cacaca;
+}
+
+// separar las card entra unas y otras
+.separador{
+    margin: 25px;
+}
+
+// centrar letras
+.centro{
+    font-size:  x large;
+    justify-content: center;
+    text-align: center;
 }
