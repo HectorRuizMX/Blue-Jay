@@ -15,4 +15,7 @@ export class RealtimeDatabaseService {
   leerDatos(ruta: string) {
     return this.db.object(ruta).valueChanges();
   }
+  control(ruta: string, datos: any) {
+    this.db.database.ref(ruta).set(datos);
+  }
 }

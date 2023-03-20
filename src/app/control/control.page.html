@@ -8,8 +8,16 @@
 </ion-header>
 
 <ion-content>
-  <!-- <ion-item>
-    <ion-label >Desactivar sensor</ion-label>
-    <ion-toggle (click)="funciones()"  color="success" [checked]="toggleValue"></ion-toggle>
-  </ion-item> -->
+  <h5 style="justify-content: center; text-align: center;" >Control de Ultrasonicos</h5>
+  <ion-card class="boton">
+    <div class=" posiicion">
+  <ion-toggle (click)="handleToggleClick()" [checked]="toggleValue" 
+  style="justify-content: center; margin: 40px;"></ion-toggle> 
+</div>
+<div class="posicion">
+  {{ data1}}
+  <br>
+  <br>
+</div>
+</ion-card>
 </ion-content>
