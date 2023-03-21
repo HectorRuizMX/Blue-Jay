@@ -1,88 +1,89 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-buttons slot="start">
-      <ion-back-button></ion-back-button>
+<ion-header >
+  <ion-toolbar color="mycolor" >
+    <ion-title>Panel</ion-title>
+    <ion-buttons slot="end" class="boton">
+      <ion-button color="whit" [routerLink]="['/menu']">Regresar</ion-button>
     </ion-buttons>
-    
-    <ion-title >PECKCAM</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
 
-  <ion-card>
-    <ion-card-header>
-      <ion-card-title> !Hola bienvenido de nuevo!  </ion-card-title>
-    </ion-card-header>
-    <br>
-    <ion-card-content>
-      PECKCAM es una propuesta acerca de un comedero inteligente, donde recaudamos informacion de aves mediante nuestro conocimiento de IOT, FIREBASE y IONIC
-    </ion-card-content>
-  </ion-card>
-  <ion-slides  class="xd" pager="true" >
+<ion-content color="mycolor">
+  <div class="inicio">
+    <h2>! Bienvenido de nuevo !</h2>
+  </div>
+
+  <!-- Inicio -->
+    <ion-card>
+      <ion-slides  class="xd" pager="true" >
+        <ion-slide>
+          <ion-card class="img1">
+            <img src="/assets/icon/comedero.jpeg">
+          </ion-card>
+        </ion-slide>
+        <!-- segundo cart  -->
     <ion-slide>
-      <ion-card>
-        <img src="/assets/icon/comedero.jpeg">
-      </ion-card>
-    </ion-slide>
-  
-    <!-- segundo cart -->
-    <ion-slide>
-      <ion-card>
+      <ion-card class="img1">
         <img  src="/assets/icon/comedero1.jpeg">
       </ion-card>
     </ion-slide>
-    <!-- tercer card -->
+    <!-- tercer card  -->
     <ion-slide>
-      <ion-card>
+      <ion-card class="img1">
         <img src="/assets/icon/comedero2.jpeg">
       </ion-card>
     </ion-slide>
   
   </ion-slides>
-
-  <ion-card>
-    <ion-card-content>
-      Las herramientas que se usaron para el desarrollo del Comedero fueron los siguientes:
-    </ion-card-content>
-  </ion-card>
-  
-
-  <ion-slides pager="true">
+      <ion-card-header>
+        <ion-card-title>Comedero de Aves</ion-card-title>
+        <ion-card-subtitle class="centro1">Grupo SM52</ion-card-subtitle>
+      </ion-card-header>
+    
+      <ion-card-content class="centro">
+        PECKCAM es una propuesta acerca de un comedero inteligente, 
+        donde recaudamos informacion de aves mediante nuestro conocimiento 
+        de IOT, FIREBASE y IONIC.
+      </ion-card-content>
+    </ion-card>
+<!-- Mas Info card 2 -->
+<ion-card class="card2">
+  <ion-slides  class="xd" pager="true" >
     <ion-slide>
-      <ion-card>
-        <img src="/assets/icon/ESP32CAM.jpg">
-          <h2>ESP32CAM</h2>
-          <ion-card-content class="ion-text-left">
-            Esta placa contiene unacamara que nos permite tomar las fotos y guardarlas en una SD
-          </ion-card-content>
+      <ion-card class="img1">
+        <img src="/assets/icon/p2.jpg">
       </ion-card>
     </ion-slide>
-  
-  
-    <!-- segundo cart -->
+    <!-- segundo cart  -->
+<ion-slide>
+  <ion-card class="img1">
+    <img  src="/assets/icon/p1.jpg">
+  </ion-card>
+</ion-slide>
+<!-- tercer card  -->
+<ion-slide>
+  <ion-card class="img1">
+    <img src="/assets/icon/p3.png">
+  </ion-card>
+</ion-slide>
 
-      <ion-slide>
-        <ion-card>
-          <img src="/assets/icon/ULTRASONICO.jpg">
-            <h2>ULTRASONICO</h2>
-            <ion-card-content class="ion-text-left">
-              Este sensor nos permite medir la cantidad de comida que tenemos almacenada en el comedero.
-            </ion-card-content>
-        </ion-card>
-      </ion-slide>
+</ion-slides>
+  <ion-card-header>
+    <ion-card-title>Problematica</ion-card-title>
+    <ion-card-subtitle class="centro1">Grupo SM52</ion-card-subtitle>
+  </ion-card-header>
 
-  
-        <ion-slide>
-          <ion-card>
-            <img src="/assets/icon/PIR.jpg">
-              <h2>PIR</h2>
-              <ion-card-content class="ion-text-left">
-                Este sensor nos permite detectar el mvimiento en el comedero para que se active la ESP32 CAM 
-              </ion-card-content>
-          </ion-card>
-        </ion-slide>
-  
-  </ion-slides>
-</ion-content>
+  <ion-card-content class="centro">
+    En la Universidad Tecnológica de Cancún, las aves consumen alimentos destinados para humanos y basura, 
+    lo que puede ser perjudicial para su salud debido a la exposición a químicos y otros contaminantes. Por 
+    lo tanto, el comedero se encargará de proveer comida destinada para ellos y de esa manera ayudarlos.
+  </ion-card-content>
+</ion-card>
+
+
+
+
+
+
+
 

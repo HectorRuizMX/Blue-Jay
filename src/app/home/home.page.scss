@@ -23,3 +23,22 @@ ion-button {
   margin-top: 12em;
   margin-left: 3.5em;
 }
+
+.button-custom {
+  --background: linear-gradient(to bottom, #ffffff, #ffffff);
+  --border-radius: 10px;
+  --color: rgb(7, 7, 7);
+  --padding-start: 2.5rem;
+  --padding-end: 2.5rem;
+  font-weight: bold;
+  font-size: 134%;
+  }
+
+  .button-custom {
+    border-radius: 10px;
+  }
+  
+  .button-custom:hover {
+    color: #000000;
+    background-color: #ffffff;
+  }

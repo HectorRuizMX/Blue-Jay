@@ -1,0 +1,31 @@
+<ion-header >
+  <ion-toolbar color="mycolor" >
+    <ion-title>Panel de Control</ion-title>
+    <ion-buttons slot="end" class="boton">
+      <ion-button color="whit" [routerLink]="['/menu']">Regresar</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <h5 style="justify-content: center; text-align: center;" >Control de Ultrasonicos</h5>
+  <ion-card class="boton">
+    <div class="bauble_box">
+      <input (click)="btn()" [checked]="UDT" class="bauble_input" id="bauble_check" name="bauble" type="checkbox">
+      <label class="bauble_label" for="bauble_check">Toggle</label>
+      <h2>Condicion del Ultrasonico</h2>
+    </div>
+    <br>
+</ion-card>
+</ion-content>
+
+
+<!-- <div class=" posiicion">
+  <ion-toggle (click)="btn()" [checked]="UDT" 
+  style="justify-content: center; margin: 40px;"></ion-toggle> 
+</div>
+<div class="posicion">
+  {{ registros1}}
+  <br>
+  <br>
+</div> -->

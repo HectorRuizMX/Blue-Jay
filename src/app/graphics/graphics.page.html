@@ -1,34 +1,80 @@
 <ion-header [translucent]="true">
-  <ion-toolbar>
+  <ion-toolbar color="mycolor">
     <ion-title>
-      Gráficos
+      Gráficas
     </ion-title>
+    <ion-buttons slot="end" class="boton">
+      <ion-button color="whit" [routerLink]="['/menu']">Regresar</ion-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
 <ion-content style="text-align: center;">
+<!-- graficas -->
+<div *ngIf="registro" lines="none" class="foto">
+    <div class="boton" [ngClass]="{
+      'rojo': registro.Fotos >= 230,
+      'amarillo': registro.Fotos >= 76 && registro.Fotos <= 229,
+      'verde': registro.Fotos < 76
+    }"> 
+        <h6>Número de Fotos</h6>
+        <div class="separador"> {{ registro.Fotos }}
+      </div>
+    </div>
+</div>
 
-  <!-- Graficas -->
-  <ion-card>
-    <ion-card-content>
-      <canvas #doughnutCanvas style="position: relative; height: 20vh; width: 40vw;"></canvas>
-    </ion-card-content>
-  </ion-card>
-  
-  <!-- Tabs -->
-  <ion-tabs>
-    <ion-router-outlet></ion-router-outlet>
-    <ion-tab-bar slot="bottom">
-      <ion-tab-button tab="radio" [routerLink]="[ '/dashboard' ]">
-        <ion-icon name="home-outline"></ion-icon>
-      </ion-tab-button>
-      <ion-tab-button tab="library" [routerLink]="[ '/graphics' ]">
-        <ion-icon name="trending-up-outline"></ion-icon>
-        </ion-tab-button>
-      <ion-tab-button tab="search" [routerLink]="[ '/profile' ]">
-        <ion-icon name="person-outline"></ion-icon>
-      </ion-tab-button>
-    </ion-tab-bar>
-  </ion-tabs>
-  
+
+<div class="boton">
+
+  <ion-col>
+    <div class="ion-text-center">
+      {{ "Almacen" }}
+      <ion-item *ngIf="registro" lines="none">
+        Le queda el {{ registro.Almacen}}% de comida
+        <div
+          class="gfc"
+          [ngStyle]="{'--p': registro1  }"
+          style="--p: 50; --b: 10px; --c: green "
+         >
+          {{ registro.Almacen}}%
+        </div>
+      </ion-item>
+    </div>
+  </ion-col> 
+</div>
+<!-- grafica 2 -->
+<div class="boton">
+  <ion-col>
+    <div class="ion-text-center">
+      {{ "Recipiente" }}
+      <ion-item *ngIf="registro" lines="none">
+        Le queda {{ registro.Recipiente}}% de comida 
+        <div
+          class="gfc"
+          [ngStyle]="{'--p': registro2}"
+          style="--p: 50; --b: 10px; --c: purple"
+        >
+          {{ registro.Recipiente}}%
+        </div>       
+      </ion-item>
+    </div>
+  </ion-col>
+</div>
+<ion-card class="cardcolor">
+<div>
+  <h6>Colorimetria de almacenamiento de fotos</h6>
+</div>
+<div class="nivel">
+    <div class="verde1">Estable</div>
+</div>
+<div class="nivel">
+  <div class="amarillo1">Moderado</div>
+</div>
+<div class="nivel">
+  <div class="rojo1">Saturado</div>
+</div>
+</ion-card>
 </ion-content>
+
+
+  

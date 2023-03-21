@@ -1,0 +1,81 @@
+ion-toolbar{
+    background-color: #32623d;
+}
+
+ion-card-header{
+    background-color: #fafdfb;
+}
+
+// estilo a los botones con un borde
+.boton{
+    border-radius: 2rem;
+    border: 2px solid#b4b4b4;
+}
+.posicion{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-weight: bold;
+}
+
+// estilo boton
+.bauble_box{
+    margin: 10px;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+}
+
+.bauble_box .bauble_label {
+    background: rgb(171, 24, 21);
+    background-position: 62px 5px;
+    background-repeat: no-repeat;
+    background-size: auto 5px;
+    border: 0;
+    border-radius: 50px;
+    box-shadow: inset 0 10px 20px rgba(173, 0, 0, 0.4), 0 -1px 0px rgba(221, 31, 31, 0.589), inset 0 -1px 0px #fff;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 0;
+    height: 40px;
+    position: relative;
+    -webkit-transition: all 500ms ease;
+    transition: all 500ms ease;
+    width: 90px;
+  }
+  
+  .bauble_box .bauble_label:before {
+    background-color: rgba(255,255,255,.2);
+    background-position: 0 0;
+    background-repeat: repeat;
+    background-size: 30% auto;
+    border-radius: 50%;
+    box-shadow: inset 0 -5px 25px rgb(97, 14, 3), 0 10px 20px rgba(0,0,0,.4);
+    content: '';
+    display: block;
+    height: 30px;
+    left: 5px;
+    position: absolute;
+    top: 6px;
+    -webkit-transition: all 500ms ease;
+    transition: all 500ms ease;
+    width: 30px;
+    z-index: 2;
+  }
+  
+  .bauble_box input.bauble_input {
+    opacity: 0;
+    z-index: 0;
+  }
+  
+  /* Checked */
+  .bauble_box input.bauble_input:checked + .bauble_label {
+    background-color: rgb(34, 204, 54);
+  }
+  
+  .bauble_box input.bauble_input:checked + .bauble_label:before {
+    background-position: 150% 0;
+    box-shadow: inset 0 -5px 25px rgb(25, 64, 2), 0 10px 20px rgba(0,0,0,.4);
+    left: calc( 100% - 35px );
+  }
