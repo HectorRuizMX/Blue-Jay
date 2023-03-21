@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-
+import { AlertController } from '@ionic/angular';
 import 'firebase/compat/database';
 import { RealtimeDatabaseService } from '../services/realtime-database.service';
+
+
 
 @Component({
   selector: 'app-control',
@@ -10,43 +12,55 @@ import { RealtimeDatabaseService } from '../services/realtime-database.service';
 })
 
 export class ControlPage implements OnInit {
-  public toggleValue: boolean = false;
+  public UDT: boolean = false;
 
 
-  data: any;
-  data1 : any;
-  data4: any;
- /*  public isChecked: boolean = false; */
+  registros: any;
+  registros1 : any;
+  registros2: any;
 
 
-constructor(private dataService: RealtimeDatabaseService) { }
 
-handleToggleClick() {
-  this.enviardatos();
+constructor(private DBSERVICE: RealtimeDatabaseService, private  alertController: AlertController) { }
+
+btn() {
+  this.boton();
+  this.btn1();
 }
-
+  /* Guardamos en la variable el dato de la base de datos */
   ngOnInit() {
-    this.dataService.getData().subscribe(data => {
-      this.data = data;
-      console.log(this.data)
+    this.DBSERVICE.getData().subscribe(registros => {
+      this.registros = registros;
+      console.log(this.registros)
     });
-    this.dataService.leerDatos('/Comedero/ControlTotal').subscribe((data4) => {
-      this.data4= data4;
-      this.toggleValue = this.data4;
+    this.DBSERVICE.DB('/Comedero/ControlTotal').subscribe((registros2) => {
+      this.registros2= registros2;
+      this.UDT = this.registros2;
     });
   }
-  enviardatos() {
-    if (this.data4 == false) {
+  /* Boton para apgar y prender el ultrasonico */
+  boton() {
+    if (this.registros2 == false) {
       const ruta = '/Comedero/ControlTotal';
       const datos = true;
-      this.dataService.control(ruta, datos);
-      this.data1 = "Ultrasonicos prendidos";
-    }else if(this.data4 == true) {
+      this.DBSERVICE.control(ruta, datos);
+      this.registros1 = "Ultrasonicos prendidos";
+    }else if(this.registros2 == true) {
       const ruta = '/Comedero/ControlTotal';
       const datos = false;
-      this.dataService.control(ruta, datos);
-      this.data1 = "Ultrasonicos apagados";
+      this.DBSERVICE.control(ruta, datos);
+      this.registros1 = "Ultrasonicos apagados";
     }
   }
-
-}
+    async btn1() {
+      if (this.registros2){
+        const alert = await this.alertController.create({
+          header: 'Alerta',
+          subHeader: 'Ultrasonicos',
+          message: 'Esta Apagado',
+          buttons: ['OK'],
+        })
+        await alert.present();
+      };
+    }
+  }

@@ -11,15 +11,14 @@
 
 <ion-content style="text-align: center;">
 <!-- graficas -->
-<div class="boton">
-
-  
-    <div class="ion-text-center">
-        <h6>Numero de Fotos</h6>
-        <div *ngIf="data" lines="none" class="foto" >
-        {{ data.Fotos}}
-        <br>
-        <br>
+<div *ngIf="registro" lines="none" class="foto">
+    <div class="boton" [ngClass]="{
+      'rojo': registro.Fotos >= 230,
+      'amarillo': registro.Fotos >= 76 && registro.Fotos <= 229,
+      'verde': registro.Fotos < 76
+    }"> 
+        <h6>Número de Fotos</h6>
+        <div class="separador"> {{ registro.Fotos }}
       </div>
     </div>
 </div>
@@ -30,14 +29,14 @@
   <ion-col>
     <div class="ion-text-center">
       {{ "Almacen" }}
-      <ion-item *ngIf="data" lines="none">
-        Le queda al el {{ data.Almacen}}% de comida
+      <ion-item *ngIf="registro" lines="none">
+        Le queda el {{ registro.Almacen}}% de comida
         <div
-          class="pie"
-          [ngStyle]="{'--p': data1}"
+          class="gfc"
+          [ngStyle]="{'--p': registro1  }"
           style="--p: 50; --b: 10px; --c: green "
          >
-          {{ data.Almacen}}%
+          {{ registro.Almacen}}%
         </div>
       </ion-item>
     </div>
@@ -48,33 +47,34 @@
   <ion-col>
     <div class="ion-text-center">
       {{ "Recipiente" }}
-      <ion-item *ngIf="data" lines="none">
-        Le queda {{ data.Recipiente}}% de comida 
+      <ion-item *ngIf="registro" lines="none">
+        Le queda {{ registro.Recipiente}}% de comida 
         <div
-          class="pie"
-          [ngStyle]="{'--p': data2}"
+          class="gfc"
+          [ngStyle]="{'--p': registro2}"
           style="--p: 50; --b: 10px; --c: purple"
         >
-          {{ data.Recipiente}}%
+          {{ registro.Recipiente}}%
         </div>       
       </ion-item>
     </div>
   </ion-col>
 </div>
-<!-- <ion-card>
-  Numero de fotos 
-  <div>
-    <div>
-      {{ data.Fotos }}
-    </div>
-  </div> -
-Numero de fotos 
-</ion-card> -->
+<ion-card class="cardcolor">
+<div>
+  <h6>Colorimetria de almacenamiento de fotos</h6>
+</div>
+<div class="nivel">
+    <div class="verde1">Estable</div>
+</div>
+<div class="nivel">
+  <div class="amarillo1">Moderado</div>
+</div>
+<div class="nivel">
+  <div class="rojo1">Saturado</div>
+</div>
+</ion-card>
 </ion-content>
 
 
-  <!-- <ion-card>
-    <ion-card-content>
-      <canvas #doughnutCanvas style="position: relative; height: 20vh; width: 40vw;"></canvas>
-    </ion-card-content>
-  </ion-card> -->
+  

@@ -1,7 +1,6 @@
 import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 import { IonicModule } from '@ionic/angular';
 import 'firebase/compat/database';
-import { RealtimeDatabaseService } from '../services/realtime-database.service';
 import { GraphicsPage } from './graphics.page';
 
 describe('GraphicsPage', () => {

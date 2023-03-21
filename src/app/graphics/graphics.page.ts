@@ -1,8 +1,6 @@
-import { Component, OnInit, ElementRef, ViewChild } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import 'firebase/compat/database';
 import { RealtimeDatabaseService } from '../services/realtime-database.service';
-import { Chart } from 'chart.js/auto';
-
 
 @Component({
   selector: 'app-graphics',
@@ -15,29 +13,29 @@ export class GraphicsPage implements OnInit {
   public toggleValue: boolean = false;
 
 
-  data: any;
-  data1: any;
-  data2: any;
-  data3: any;
- /*  public isChecked: boolean = false; */
+  registro: any;
+  registro1: any;
+  registro2: any;
+  registro3: any;
 
 
-constructor(private dataService: RealtimeDatabaseService) { }
 
+constructor(private DBSERVICE: RealtimeDatabaseService) { }
 
+/* guardamos en variables los datos de la DB  */
   ngOnInit() {
-    this.dataService.getData().subscribe(data => {
-      this.data = data;
-      console.log(this.data)
+    this.DBSERVICE.getData().subscribe(registro => {
+      this.registro = registro;
+      console.log(this.registro)
     });
-    this.dataService.leerDatos('/Comedero/Almacen').subscribe((data1) => {
-      this.data1 = data1;
+    this.DBSERVICE.DB('/Comedero/Almacen').subscribe((registro1) => {
+      this.registro1 = registro1;
     });
-    this.dataService.leerDatos('/Comedero/Recipiente').subscribe((data2) => {
-      this.data2 = data2;
+    this.DBSERVICE.DB('/Comedero/Recipiente').subscribe((registro2) => {
+      this.registro2 = registro2;
     });
-    this.dataService.leerDatos('/Comedero/Fotos').subscribe((data3) => {
-      this.data3 = data3;
+    this.DBSERVICE.DB('/Comedero/Fotos').subscribe((registro3) => {
+      this.registro3 = registro3;
     });
   }
 }
