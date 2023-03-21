@@ -12,7 +12,7 @@ export class RealtimeDatabaseService {
     return this.db.object('Comedero').valueChanges();
   }
 
-  leerDatos(ruta: string) {
+  DB(ruta: string) {
     return this.db.object(ruta).valueChanges();
   }
   control(ruta: string, datos: any) {
