@@ -13,11 +13,9 @@
 <!-- graficas -->
 <div *ngIf="registro" lines="none" class="foto">
     <div class="boton" [ngClass]="{
-      'rojo': registro.Fotos >= 230,
-      'amarillo': registro.Fotos >= 76 && registro.Fotos <= 229,
-      'verde': registro.Fotos < 76
+    
     }"> 
-        <h6>Número de Fotos</h6>
+        <h6>Deteccion de Movimiento </h6>
         <div class="separador"> {{ registro.Fotos }}
       </div>
     </div>
@@ -60,20 +58,6 @@
     </div>
   </ion-col>
 </div>
-<ion-card class="cardcolor">
-<div>
-  <h6>Colorimetria de almacenamiento de fotos</h6>
-</div>
-<div class="nivel">
-    <div class="verde1">Estable</div>
-</div>
-<div class="nivel">
-  <div class="amarillo1">Moderado</div>
-</div>
-<div class="nivel">
-  <div class="rojo1">Saturado</div>
-</div>
-</ion-card>
 </ion-content>
 
 
